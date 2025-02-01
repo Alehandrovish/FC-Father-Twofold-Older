@@ -1,32 +1,27 @@
 "use strict";
 /**
  * Calculate the age at which a father should be twice as old as his son
- * @param {number} ageF - Fathers age
- * @param {number} ageS  - Sons age
+ * @param {number} ageF - Father's age
+ * @param {number} ageS  - Son's age
  * @returns {number} Age number
  */
 function fatherTwofoldOlder(ageF, ageS) {
-  let counter = 0;
   if (ageF - ageS >= 15) {
-    if (ageF >= ageS * 2) {
-      while (ageF !== ageS * 2) {
-        counter++;
-        ageF++;
-        ageS++;
-      }
+    const difference = ageF - ageS * 2;
+    if (difference === 0) {
+      return "Father already twofold older than son";
+    } else if (difference > 0) {
+      return `Father was twofold older than son 
+             ${Math.abs(difference)} years ago`;
     } else {
-      while (ageF !== ageS * 2) {
-        counter++;
-        ageF--;
-        ageS--;
-      }
+      return `Father will be twofold older than son after 
+             ${Math.abs(difference)} years`;
     }
   } else {
     return "diference between ages is not 15";
   }
-  return counter;
 }
-
-console.log(fatherTwofoldOlder(30, 10));
-console.log(fatherTwofoldOlder(50, 27));
-console.log(fatherTwofoldOlder(25, 20));
+console.log(fatherTwofoldOlder(50, 25)); //difference > 15 Fa == Sa
+console.log(fatherTwofoldOlder(30, 10)); //difference > 15 Fa >= Sa
+console.log(fatherTwofoldOlder(50, 27)); //difference > 15 Fa <= Sa
+console.log(fatherTwofoldOlder(25, 20)); //difference < 15
