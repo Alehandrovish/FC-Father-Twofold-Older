@@ -7,15 +7,15 @@
  */
 function fatherTwofoldOlder(ageF, ageS) {
   if (ageF - ageS >= 15) {
-    const difference = ageF - ageS * 2;
-    if (difference === 0) {
+    const DIFFERENCE = ageF - ageS * 2;
+    if (DIFFERENCE === 0) {
       return "Father already twofold older than son";
-    } else if (difference > 0) {
+    } else if (DIFFERENCE > 0) {
       return `Father was twofold older than son 
-             ${Math.abs(difference)} years ago`;
+             ${Math.abs(DIFFERENCE)} years ago`;
     } else {
       return `Father will be twofold older than son after 
-             ${Math.abs(difference)} years`;
+             ${Math.abs(DIFFERENCE)} years`;
     }
   } else {
     return "diference between ages is not 15";
