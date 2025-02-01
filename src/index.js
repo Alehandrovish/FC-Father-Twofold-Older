@@ -6,18 +6,27 @@
  * @returns {number} Age number
  */
 function fatherTwofoldOlder(ageF, ageS) {
-  if (ageF - ageS >= 15 && ageF >= 0 && ageS >= 0 && ageF > ageS) {
-    const DIFFERENCE = ageF - ageS * 2;
-    if (DIFFERENCE === 0) {
-      return "Father already twofold older than son";
-    } else if (DIFFERENCE > 0) {
-      return `Father was twofold older than son 
-             ${Math.abs(DIFFERENCE)} years ago`;
-    } else {
-      return `Father will be twofold older than son after 
-             ${Math.abs(DIFFERENCE)} years`;
-    }
-  } else {
+  if (Math.abs(ageF - ageS) < 15) {
     return "diference between ages is not 15";
   }
+  if (ageF < 0) {
+    return "Father`s age input uncorect";
+  }
+  if (ageS < 0) {
+    return "Son`s age input uncorect";
+  }
+  if (ageF < ageS) {
+    return "Son are older than father it can not be";
+  }
+  const DIFFERENCE = ageF - ageS * 2;
+  return Math.abs(DIFFERENCE);
 }
+console.group();
+console.log(fatherTwofoldOlder(35, 25));
+console.log(fatherTwofoldOlder(-50, 5));
+console.log(fatherTwofoldOlder(50, -5));
+console.log(fatherTwofoldOlder(30, 50));
+console.log(fatherTwofoldOlder(40, 40));
+console.log(fatherTwofoldOlder(56, 13));
+console.log(fatherTwofoldOlder(60, 44));
+console.groupEnd;
