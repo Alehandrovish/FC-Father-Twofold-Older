@@ -6,7 +6,7 @@
  * @returns {number} Age number
  */
 function fatherTwofoldOlder(ageF, ageS) {
-  if (ageF - ageS >= 15) {
+  if (ageF - ageS >= 15 && ageF >= 0 && ageS >= 0 && ageF > ageS) {
     const DIFFERENCE = ageF - ageS * 2;
     if (DIFFERENCE === 0) {
       return "Father already twofold older than son";
