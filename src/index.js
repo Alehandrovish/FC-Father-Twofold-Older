@@ -21,7 +21,3 @@ function fatherTwofoldOlder(ageF, ageS) {
     return "diference between ages is not 15";
   }
 }
-console.log(fatherTwofoldOlder(50, 25)); //difference > 15 Fa == Sa
-console.log(fatherTwofoldOlder(30, 10)); //difference > 15 Fa >= Sa
-console.log(fatherTwofoldOlder(50, 27)); //difference > 15 Fa <= Sa
-console.log(fatherTwofoldOlder(25, 20)); //difference < 15
