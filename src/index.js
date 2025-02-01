@@ -21,3 +21,12 @@ function fatherTwofoldOlder(ageF, ageS) {
   const DIFFERENCE = ageF - ageS * 2;
   return Math.abs(DIFFERENCE);
 }
+console.group("testing");
+console.log(fatherTwofoldOlder(35, 25));
+console.log(fatherTwofoldOlder(-50, 5));
+console.log(fatherTwofoldOlder(50, -5));
+console.log(fatherTwofoldOlder(30, 50));
+console.log(fatherTwofoldOlder(40, 40));
+console.log(fatherTwofoldOlder(56, 13));
+console.log(fatherTwofoldOlder(60, 44));
+console.groupEnd;
