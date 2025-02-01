@@ -1,5 +1,10 @@
 "use strict";
-
+/**
+ * Calculate the age at which a father should be twice as old as his son
+ * @param {number} ageF - Fathers age
+ * @param {number} ageS  - Sons age
+ * @returns {number} Age number
+ */
 function fatherTwofoldOlder(ageF, ageS) {
   let counter = 0;
   if (ageF - ageS >= 15) {
